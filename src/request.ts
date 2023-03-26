@@ -74,6 +74,7 @@ export default async function request(
   const response = await fetch(url, opts as RequestInit);
   const data: Response = await response.json();
   if (data.error) {
+    console.error(data.error.message);
     throw new Error(`message: ${data.error.message}
                         type: ${data.error.type}
                         code: ${data.error.code}`);
