@@ -1,0 +1,21 @@
+{
+	"name": "email-responder.gpt",
+	"version": "1.0.0",
+	"description": "",
+    "type": "module",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc -w"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^18.15.10"
+	},
+	"dependencies": {
+		"@types/inquirer": "^9.0.3",
+		"inquirer": "^9.1.5"
+	}
+}
