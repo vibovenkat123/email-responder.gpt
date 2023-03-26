@@ -8,7 +8,7 @@ type emailAnswers = {
 }
 
 async function getSettings(): Promise<settingAnswers> {
-    const settingsAnswers = await inquirer.prompt(
+    const answers: settingAnswers = await inquirer.prompt(
         {
             name: "num_responses",
             type: "number",
@@ -18,7 +18,7 @@ async function getSettings(): Promise<settingAnswers> {
             }
         },
     )
-    return settingsAnswers;
+    return answers;
 }
 
 async function getEmail(): Promise<emailAnswers> {
