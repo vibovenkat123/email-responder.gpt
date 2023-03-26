@@ -2,6 +2,7 @@ import inquirer from 'inquirer'
 import generatePrompt from './prompt.js';
 import request from './request.js';
 import { Response } from './request.js';
+
 type settingAnswers = {
     num_responses: number;
 }
