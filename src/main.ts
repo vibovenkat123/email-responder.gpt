@@ -37,7 +37,12 @@ async function getEmail(): Promise<emailAnswers> {
 
 async function main() {
     const settings = await getSettings();
-    console.log(settings.num_responses)
+    const email = await getEmail()
+    const prompts = generatePrompt(settings.num_responses, email.content)
+    const data: Response = await request(prompts);
+    for (const choice of data.choices) {
+        console.log(choice.message.content);
+    }
 }
 
 main();
